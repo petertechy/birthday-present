@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&display=swap" rel="stylesheet" />
+  <title>Happy Birthday - I love you baby</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .title-font {
+      position: relative;
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .title {
+      position: relative;
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-style: normal;
+      margin-bottom: 1.5rem;
+      animation-name: bounce;
+      animation-duration: 3s;
+      animation-delay: 0;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+    }
+    .body {
+      font-family: "Nunito Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings: "width" 100, "YTLC" 500;
+    }
+    .width {
+      width: 80%;
+      margin: auto;
+      padding-bottom: 0.5rem;
+      line-height: 27px;
+    }
+    .inner {
+      display: none;
+      animation-name: typeText;
+      animation-duration: 5s;
+      animation-delay: 0;
+      animation-delay: 3s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+    }
+    #background {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #background video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    #container {
+      text-align: center;
+      color: azure;
+      display: none;
+    }
+    .dark {
+      padding: 1rem;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+      border-radius: 1.5rem;
+    }
+    .name {
+      font-weight: bold;
+    }
+    .btn {
+      padding: 10px 20px;
+      background: black;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      font-family: "Pacifico", cursive;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 1px 0px 8px 1px white;
+      transition: all 1s;
+    }
+    .btn:hover {
+      background: white;
+      color: black;
+      border: 1px solid;
+      cursor: pointer;
+      transform: scale(1.09);
+    }
+    .span {
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+      margin-left: 2px;
+    }
+    @keyframes bounce {
+      0% {
+        position: absolute;
+        top: 100%;
+        font-size: 2.5rem;
+        color: peachpuff;
+      }
+      75% {
+        font-size: 2rem;
+        color: pink;
+      }
+      100% {
+        transform: translateY(-10vh);
+        color: antiquewhite;
+      }
+    }
+    @keyframes typeText {
+      0% {
+        opacity: 0;
+        font-weight: bold;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        display: block;
+        opacity: 1;
+        font-weight: bold;
+      }
+    }
+    @media screen and (width < 769px) {
+      .width {
+        width: 100%;
+      }
+    }
+    @media screen and (width < 481px) {
+        #background video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      /* object-fit: contain; */
+      background-position: center;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    }
+  </style>
+</head>
+<body>
+  <main id="background">
+    <video autoplay muted loop>
+      <source src="./Media/Happy Birthday Song For Special Day 💎 Happy Birthday To You 💎.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div id="container">
+      <h1 class="title">My Desire - Asake mi</h1>
+      <div id="content" class="inner body">
+        <p class="width">
+          Happy Birthday, my love! 🎉 Today, I celebrate not just the day you were born but the incredible person you've become. You fill my life with joy, laughter, and endless love every single day. On this special day, I want to remind you of how amazing you are and how grateful I am to have you by my side.💖🎂<span class="span">- Olanrewaju.</span>
+        </p>
+        <p class="title-font">Happy Birthday</p>
+        <p class="name">Adesire Mii</p>
+        <p class="">I love you dear.</p>
+        <button class="btn" id="audioButton" onclick="toggleAudio()">👉 See your Beautiful Self</button>
+      </div>
+    </div>
+  </main>
+  <script>
+     window.addEventListener('DOMContentLoaded', (click) => {
+            var audio = new Audio('./Media/akpos_days of elijah.mp3');
+            audio.play();
+        });
+    function toggleAudio() {
+      location.href = './gallery.html';
+    }
+    setTimeout(() => {
+      document.getElementById("content").style.display = "block";
+      document.getElementById("content").style.opacity = 0;
+      document.getElementById("content").addEventListener("animationend", () => {
+        document.getElementById("content").style.opacity = 1;
+        setTimeout(() => {
+          document.getElementById("content").classList.add("dark");
+        }, 5000);
+      });
+    }, 9000);
+    setTimeout(() => {
+      document.getElementById("container").style.display = "block";
+    }, 7000);
+  </script>
+</body>
+</html>
