@@ -1,82 +1,113 @@
 body {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    margin: 60px 0px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  margin: 60px 0px;
 }
 
 .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 30px;
+  /* border: 5px solid orange; */
+  padding-left: 12px;
+}
+
+.img-1 {
+  background-image: url("./Media/Desire 01.JPG");
+  --delay: 0s;
+}
+.img-2 {
+  background-image: url("./Media/Desire 02.JPG");
+  --delay: 0.2s;
+}
+.img-3 {
+  background-image: url("./Media/Desire 03.JPG");
+  --delay: 0.4s;
+}
+.img-4 {
+  background-image: url("./Media/Desire 04.JPG");
+  --delay: 0.6s;
+}
+.img-5 {
+  background-image: url("./Media/05.JPG");
+  --delay: 0.8s;
+}
+.img-6 {
+  background-image: url("./Media/Desire 06.JPG");
+  --delay: 1s;
+}
+.img-7 {
+  background-image: url("./Media/Desire 07.JPG");
+  --delay: 1.2s;
+}
+.img {
+  width: 400px;
+  height: 500px;
+  /* border: 3px solid red; */
+  background-position: center;
+  background-size: contain;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 1px rgba(255, 255, 255, 0.59);
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Fade-in effect */
+  }
+}
+.text-title {
+  color: rgba(255, 217, 0, 0.79);
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+}
+.btn {
+  margin-left: 4rem;
+  padding: 10px 14px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 217, 0, 0.79);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: rgba(255, 217, 0, 0.79);
+  color: black;
+}
+@media screen and (max-width: 768px) {
+  .text-title {
+    font-size: 2rem;
+  }
+  .image-container {
+    column-gap: 20px;
     row-gap: 30px;
     /* border: 5px solid orange; */
-    padding-left: 12px;
-}
-
-
-.img-1{
-    background: url("./Media/Desire\ 01.JPG");
-}
-.img-2{
-    background: url("./Media/Desire\ 02.JPG");
-}
-.img-3{
-    background: url("./Media/Desire\ 03.JPG");
-}
-.img-4{
-    background: url("./Media/Desire\ 04.JPG");
-}
-.img-5{
-    background: url("./Media/05.JPG");
-}
-.img-6{
-    background: url("./Media/Desire\ 06.JPG");
-}
-.img-7{
-    background: url("./Media/Desire\ 07.JPG");
-}
-.img{
-    width: 400px;
-    height: 500px;
-    /* border: 3px solid red; */
-    background-position: center;
-    background-size: contain;
-}
-.text-title{
-    color: rgba(255, 217, 0, 0.79);
-    font-size: 3rem;
-    text-align: center;
-    font-family: cursive;
-}
-.btn{
-    margin-left: 4rem;
-    padding: 10px 14px;
-    background-color: transparent;
-    color: white;
-    border: 2px solid rgba(255, 217, 0, 0.79);
-    border-radius: 15px;
-    cursor: pointer;
-}
-.btn:hover{
-    background-color: rgba(255, 217, 0, 0.79);
-    color: black;
-
+    padding: 0px 10px 0px 10px;
+    justify-content: center;
+  }
+  .img {
+    width: 350px;
+    height: 400px;
+  }
 }
 @media screen and (max-width: 480px) {
-    .text-title{
-        
-        font-size: 2rem;
-        
-    }
-    .image-container {
-        column-gap: 10px;
-        row-gap: 30px;
-        /* border: 5px solid orange; */
-        padding: 0px 10px 0px 10px;
-    }
-    
+  .text-title {
+    font-size: 1.5rem;
+  }
+  .image-container {
+    column-gap: 10px;
+    row-gap: 30px;
+    /* border: 5px solid orange; */
+    padding: 0px 10px 0px 10px;
+  }
 }

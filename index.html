@@ -85,7 +85,7 @@
     }
     .dark {
       padding: 1rem;
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+      background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.77));
       border-radius: 1.5rem;
     }
     .name {
@@ -161,7 +161,7 @@
       /* object-fit: contain; */
       background-position: center;
       background-size: contain;
-      transform: translate(-50%, -50%);
+      /* transform: translate(-50%, -50%); */
       z-index: -1;
     }
     }
@@ -177,7 +177,7 @@
       <h1 class="title">My Desire - Asake mi</h1>
       <div id="content" class="inner body">
         <p class="width">
-          Happy Birthday, my love! 🎉 Today, I celebrate not just the day you were born but the incredible person you've become. You fill my life with joy, laughter, and endless love every single day. On this special day, I want to remind you of how amazing you are and how grateful I am to have you by my side.💖🎂<span class="span">- Olanrewaju.</span>
+          Happy Birthday, my love! 🎉 Today, I celebrate not just the day you were born but the incredible person you've become. You fill my life with joy, happiness, and endless love every single day. On this special day, I want to remind you of how amazing you are and how grateful I am to have you by my side.💖🎂<span class="span">- Olanrewaju.</span>
         </p>
         <p class="title-font">Happy Birthday</p>
         <p class="name">Adesire Mii</p>
@@ -187,10 +187,12 @@
     </div>
   </main>
   <script>
-     window.addEventListener('DOMContentLoaded', (click) => {
-            var audio = new Audio('./Media/akpos_days of elijah.mp3');
-            audio.play();
-        });
+      window.addEventListener('DOMContentLoaded', (click) => {
+      const audio = new Audio('./Media/song.mp3');
+      setTimeout(() => {
+        audio.play().catch(error => console.log('Audio playback error:', error));
+      }, 5000);
+    });
     function toggleAudio() {
       location.href = './gallery.html';
     }
@@ -201,12 +203,12 @@
         document.getElementById("content").style.opacity = 1;
         setTimeout(() => {
           document.getElementById("content").classList.add("dark");
-        }, 5000);
+        }, 7000);
       });
-    }, 9000);
+    }, 11000);
     setTimeout(() => {
       document.getElementById("container").style.display = "block";
-    }, 7000);
+    }, 9000);
   </script>
 </body>
 </html>
