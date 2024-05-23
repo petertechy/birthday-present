@@ -21,6 +21,12 @@
     
 
     <script>
+        window.addEventListener('DOMContentLoaded', (click) => {
+      const audio = new Audio('./Media/song1.mp3');
+      setTimeout(() => {
+        audio.play().catch(error => console.log('Audio playback error:', error));
+      }, 500);
+    });
       document.querySelector("#goHome").addEventListener("click", () => {
         location.href = "./index.html";
       });
